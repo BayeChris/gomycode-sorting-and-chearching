@@ -14,8 +14,8 @@ BEGIN
 
    FOR i FROM 0 TO n-1 STEP 1  DO
        FOR j  FROM 0 TO n-i-1 STEP 1  DO
-           IF (arr[i] > arr[i+1]) THEN
-               swap(arr[i], arr[i+1])
+           IF (arr[j] > arr[j+1]) THEN
+               swap(arr[j], arr[j+1])
            END_IF
        END_FOR
    END_FOR
