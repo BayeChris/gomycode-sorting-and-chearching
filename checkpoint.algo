@@ -1,0 +1,22 @@
+PROCEDURE tri_carte(VAR arr : ARRAY_OF INTEGER; i,j,n,elt : INTEGER)
+VAR
+
+   i,j,n : INTEGER;
+   arr : ARRAY_OF INTEGER [length];
+   elt : INTEGER;
+
+BEGIN
+   write("Veuillez choisir votre carte")
+   read(elt)
+   n := arr.length;
+
+   arr := arr.push[elt]
+
+   FOR i FROM 0 TO n-1 STEP 1  DO
+       FOR j  FROM 0 TO n-i-1 STEP 1  DO
+           IF (arr[i] > arr[i+1]) THEN
+               swap(arr[i], arr[i+1])
+           END_IF
+       END_FOR
+   END_FOR
+END
